@@ -12,6 +12,6 @@ PKG_MAINTAINER:=Oskari Rauta <oskari.rauta@gmail.com>
 
 PKG_VERSION:=v0.41.0
 
-include ../../luci.mk
+include ../../../luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
