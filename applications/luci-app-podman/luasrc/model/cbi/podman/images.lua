@@ -55,7 +55,7 @@ function get_images()
 		for ci,cv in ipairs(containers) do
 			if v.Id == cv.ImageID then
 				data[index]["_containers"] = (data[index]["_containers"] and (data[index]["_containers"] .. " | ") or "")..
-				'<a href='..luci.dispatcher.build_url("admin/podman/container/"..cv.Id)..' class="podman_link" title="'..translate("Container detail")..'">'.. cv.Names[1]:sub(2).."</a>"
+				'<a href='..luci.dispatcher.build_url("admin/podman/container/"..cv.Id)..' class="podman_link" title="'..translate("Container detail")..'">'.. cv.Names[1]:sub(1).."</a>"
 			end
 		end
 
