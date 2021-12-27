@@ -19,7 +19,7 @@ function progressbar(percent, text) {
 	return E('div', {
 		'class': 'cbi-progressbar',
 		'title': text
-	}, E('div', { 'style': 'width:%.2f%%'.format(percent) }));
+	}, E('div', { 'style': 'width:%.2f%%'.format(percent > 100 ? 100 : percent) }));
 }
 
 return baseclass.extend({
