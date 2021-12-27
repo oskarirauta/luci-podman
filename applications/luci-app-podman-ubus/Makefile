@@ -1,6 +1,9 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-app-podman-ubus
+PKG_VERSION:=0.8
+PKG_RELEASE:=$(AUTORELEASE)
+
 LUCI_TITLE:=podman-ubus luci interface
 LUCI_DEPENDS:=+luci-mod-status +podman-ubus
 
