@@ -3,9 +3,11 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=luci-app-podman-ubus
 PKG_VERSION:=0.8
 PKG_RELEASE:=$(AUTORELEASE)
+PKG_MAINTAINER:=Oskari Rauta <oskari.rauta@gmail.com>
 
 LUCI_TITLE:=podman-ubus luci interface
 LUCI_DEPENDS:=+luci-mod-status +podman-ubus
+LUCI_PKGARCH:=all
 
 include ../../../luci/luci.mk
 
