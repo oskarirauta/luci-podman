@@ -4,10 +4,10 @@ PKG_NAME:=luci-app-systembus-cpu
 PKG_VERSION:=0.9
 PKG_RELEASE:=$(AUTORELEASE)
 PKG_MAINTAINER:=Oskari Rauta <oskari.rauta@gmail.com>
-LUCI_PKGARCH:=all
 
 LUCI_TITLE:=Systembus cpu statistics
 LUCI_DEPENDS:=+luci-mod-status +systembus
+LUCI_PKGARCH:=all
 
 include ../../../luci/luci.mk
 
