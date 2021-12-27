@@ -1,6 +1,9 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-app-systembus-cpu
+PKG_VERSION:=0.9
+PKG_RELEASE:=$(AUTORELEASE)
+
 LUCI_TITLE:=Systembus cpu statistics
 LUCI_DEPENDS:=+luci-mod-status +systembus
 
