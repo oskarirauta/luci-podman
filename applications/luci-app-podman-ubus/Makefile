@@ -14,13 +14,10 @@ include ../../../luci/luci.mk
 define Package/luci-app-podman-ubus/postinst
 #!/bin/sh
 
-TARGET_PATH="/usr/share/rpcd/acl.d"
+TARGET_PATH="$${IPKG_INSTROOT}/usr/share/rpcd/acl.d"
 FILENAME="luci-mod-status-index.json"
 TMP_PATH=$$(mktemp -d -u)
 TMP_FILE="$$TMP_PATH/$$FILENAME"
-
-[ -z "$${IPKG_INSTROOT}" ] ||
-	TARGET_PATH="$${IPKG_INSTROOT}/usr/share/rpcd/acl.d"
 
 mkdir -p $${TMP_PATH}
 rm -f $${TMP_FILE} $${TMP_FILE}.new
