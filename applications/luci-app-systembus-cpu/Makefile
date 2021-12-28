@@ -19,6 +19,9 @@ FILENAME="luci-mod-status-index.json"
 TMP_PATH=$$(mktemp -d -u)
 TMP_FILE="$$TMP_PATH/$$FILENAME"
 
+[ -z "$${IPKG_INSTROOT}" ] &&
+	TARGET_PATH="$${IPKG_INSTROOT}/usr/share/rpcd/acl.d"
+
 mkdir -p $${TMP_PATH}
 rm -f $${TMP_FILE} $${TMP_FILE}.new
 cp -f $${TARGET_PATH}/$${FILENAME} $${TMP_FILE}
